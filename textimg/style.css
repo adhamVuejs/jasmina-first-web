@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@700&wght@300&display=swap");
+
+
+body {
+    background-color: black;
+    color: white;
+    height: 100vh;
+    width: 100%;
+    font-family: "Inter", sans-serif;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns:1fr 1fr 1fr 1fr;
+}
+
+.container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+   
+}
+
+.container img:nth-child(2) {
+    mix-blend-mode: multiply;
+    opacity: .9;
+}
+li {
+    list-style: none;
+}
+
+.nav {
+    width: 100%;
+    position: absolute;
+    height: 50px;
+    background: transparent;
+    z-index: 1000;
+    color: white;
+    display: flex;
+    padding: 0 20px;
+    align-items: center;
+    justify-content: space-between;
+}
+.menu {
+    display: flex;
+    background: transparent;
+}
+
+.item {
+    margin-left: 20px;
+    font-size: 18px;
+    font-weight: bold;
+}
+.text {
+    z-index: 900;
+    left: 20%;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-start: 2;
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+}
+.text > .caption {
+    padding: 1em;
+}
+.btn {
+    z-index: 700;
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 2;
+    grid-row-start: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn > button {
+    padding: 1em 3em;
+    background-color: transparent;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    border: 2px solid green;
+    border-radius: 20px;
+    border: 10px solid;
+    border-image-slice: 1;
+    border-width: 5px;
+    border-image-source: linear-gradient(to left, #743ad5, #d53a9d);
+}
+.text > h1 {
+    font-size: 10em;
+    background: linear-gradient(to right, #ffb412 0%, #650372 80%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.logo {
+    /* width: 100px; */
+    font-size: 1.8em;
+    background: linear-gradient(to right, #ff1212 0%, #724203 80%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
